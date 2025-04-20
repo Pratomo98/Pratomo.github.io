@@ -1,119 +1,124 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashmoneytrans</title>
-    <!-- Link ke file CSS eksternal -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashmoneytrans</title>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#features">Fitur</a></li>
-                <li><a href="#about">Tentang Kami</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Bagian Pendaftaran Pengguna -->
-    <section id="registration">
-        <h2>Daftar Akun</h2>
-        <form action="/submit_registration" method="POST">
-            <label for="username">Nama Pengguna:</label>
-            <input type="text" id="username" name="username" required>
+  <!-- Header -->
+  <header>
+    <h1>Flashmoneytrans</h1>
+    <nav>
+      <ul>
+        <li><a href="#register">Daftar</a></li>
+        <li><a href="#wallet">Dompet</a></li>
+        <li><a href="#transfer">Transfer</a></li>
+        <li><a href="#crypto">Crypto</a></li>
+        <li><a href="#bank">Bank</a></li>
+        <li><a href="#topup">Top Up</a></li>
+        <li><a href="#invoice">Invoice</a></li>
+        <li><a href="#referral">Referral</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+  <!-- Form Pendaftaran -->
+  <section id="register">
+    <h2>Daftar Akun</h2>
+    <form>
+      <input type="text" placeholder="Username ID" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Kata Sandi" required />
+      <input type="tel" placeholder="Nomor Handphone" required />
+      <input type="text" placeholder="Lokasi" required />
+      <input type="file" accept="image/*" />
+      <button type="submit">Daftar</button>
+    </form>
+  </section>
 
-            <label for="password">Kata Sandi:</label>
-            <input type="password" id="password" name="password" required>
+  <!-- Dompet -->
+  <section id="wallet">
+    <h2>Dompet Saya</h2>
+    <p>Saldo: $0.00</p>
+    <button>Tambah Saldo</button>
+    <button>Tarik Uang</button>
+  </section>
 
-            <label for="phone">Nomor Handphone:</label>
-            <input type="tel" id="phone" name="phone" required>
+  <!-- Transfer -->
+  <section id="transfer">
+    <h2>Transfer Uang</h2>
+    <form>
+      <input type="text" placeholder="Username Tujuan" />
+      <input type="number" placeholder="Jumlah" />
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
 
-            <label for="location">Lokasi:</label>
-            <input type="text" id="location" name="location" required>
+  <!-- Crypto -->
+  <section id="crypto">
+    <h2>Beli Crypto</h2>
+    <form>
+      <select>
+        <option>Bitcoin</option>
+        <option>Ethereum</option>
+        <option>USDT</option>
+      </select>
+      <input type="number" placeholder="Jumlah (USD)" />
+      <button type="submit">Beli</button>
+    </form>
+  </section>
 
-            <label for="photo">Foto Profil:</label>
-            <input type="file" id="photo" name="photo" accept="image/*" required>
+  <!-- Bank -->
+  <section id="bank">
+    <h2>Akun Bank Terhubung</h2>
+    <p>Bank yang didukung: BCA, Mandiri, BNI, BRI, Permata, CIMB, dll.</p>
+    <form>
+      <input type="text" placeholder="Nama Bank" />
+      <input type="text" placeholder="Nomor Rekening" />
+      <button type="submit">Tautkan</button>
+    </form>
+  </section>
 
-            <button type="submit">Daftar</button>
-        </form>
-    </section>
+  <!-- Top Up -->
+  <section id="topup">
+    <h2>Top Up</h2>
+    <form>
+      <select>
+        <option>Transfer Bank</option>
+        <option>QRIS</option>
+        <option>GoPay</option>
+        <option>OVO</option>
+        <option>DANA</option>
+      </select>
+      <input type="number" placeholder="Jumlah" />
+      <button type="submit">Top Up</button>
+    </form>
+  </section>
 
-    <!-- Bagian Pengelolaan Akun Bank -->
-    <section id="bank-account">
-        <h2>Kelola Akun Bank</h2>
-        <form action="/link_bank_account" method="POST">
-            <label for="bank-name">Nama Bank:</label>
-            <input type="text" id="bank-name" name="bank_name" required>
+  <!-- Invoice -->
+  <section id="invoice">
+    <h2>Invoice Pembayaran</h2>
+    <form>
+      <input type="text" placeholder="Tagih ke (Username/Email)" />
+      <input type="number" placeholder="Jumlah" />
+      <textarea placeholder="Deskripsi"></textarea>
+      <button type="submit">Kirim Invoice</button>
+    </form>
+  </section>
 
-            <label for="account-number">Nomor Rekening:</label>
-            <input type="text" id="account-number" name="account_number" required>
+  <!-- Referral -->
+  <section id="referral">
+    <h2>Referral</h2>
+    <p>Bagikan link referral Anda untuk mendapatkan bonus:</p>
+    <input type="text" readonly value="https://ewallet.com/ref/username" />
+    <button>Salin</button>
+  </section>
 
-            <button type="submit">Tautkan Akun Bank</button>
-        </form>
-    </section>
+  <footer>
+    <p>&copy; 2025 Global E-Wallet. All rights reserved.</p>
+  </footer>
 
-    <!-- Bagian Penyimpanan Uang -->
-    <section id="wallet">
-        <h2>Dompet Saya</h2>
-        <p>Saldo: Rp <span id="balance">0</span></p>
-        <button id="deposit">Setor Uang</button>
-        <button id="withdraw">Tarik Uang</button>
-    </section>
-
-    <!-- Bagian Pembayaran dan Invoice -->
-    <section id="payments">
-        <h2>Pembayaran</h2>
-        <form action="/create_invoice" method="POST">
-            <label for="amount">Jumlah Pembayaran:</label>
-            <input type="number" id="amount" name="amount" required>
-
-            <label for="recipient">Penerima:</label>
-            <input type="text" id="recipient" name="recipient" required>
-
-            <button type="submit">Buat Invoice</button>
-        </form>
-    </section>
-
-    <!-- Bagian Pembelian Cryptocurrency -->
-    <section id="crypto-purchase">
-        <h2>Beli Cryptocurrency</h2>
-        <form action="/buy_crypto" method="POST">
-            <label for="crypto-type">Jenis Cryptocurrency:</label>
-            <select id="crypto-type" name="crypto_type" required>
-                <option value="bitcoin">Bitcoin</option>
-                <option value="ethereum">Ethereum</option>
-                <option value="litecoin">Litecoin</option>
-            </select>
-
-            <label for="crypto-amount">Jumlah:</label>
-            <input type="number" id="crypto-amount" name="crypto_amount" required>
-
-            <button type="submit">Beli</button>
-        </form>
-    </section>
-
-    <!-- Bagian Referral -->
-    <section id="referral">
-        <h2>Undang Teman</h2>
-        <p>Gunakan kode referral Anda untuk mendapatkan bonus:</p>
-        <input type="text" id="referral-code" value="REF12345" readonly>
-        <button onclick="copyReferralCode()">Salin Kode</button>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Dompet Digital Internasional Flashmoneytrans. Semua hak dilindungi undang-undang.</p>
-    </footer>
-
-    <!-- Script JavaScript untuk fungsionalitas tambahan -->
-    <script src="scripts.js"></script>
 </body>
 </html>
